@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Aplicatie</title>
+    <meta charset="UTF-8" />
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="seedUsers">Vezi 3 utilizatori</button>
+    <button id="seedGraphQLUser">Utilizator Seed GraphQL</button>
+    <button id="seedPosts">Vezi 3 postari</button>
+    <div class="container">
+      <form id="addUser">
+        <h3>Creare</h3>
+        <p>
+          <label for="instagramId">ID Instagram </label>
+          <input type="text" name="instagramId" id="instagramId" required />
+        </p>
+        <p>
+          <label for="userName">Nume utilizator</label>
+          <input type="text" name="userName" id="userName" required />
+        </p>
+        <p>
+          <label for="followersCount">Numărul de urmăritori</label>
+          <input
+            type="number"
+            name="followersCount"
+            id="followersCount"
+            required
+          />
+        </p>
+        <p>
+          <button type="submit">Inregistrator</button>
+        </p>
+        <p id="addUserError"></p>
+      </form>
+
+      <div>
+        <form id="searchUserById">
+          <h3>Căutare prin ID</h3>
+          <p>
+            <label for="searchInstagramId">Identificant</label>
+            <input
+              type="text"
+              name="searchInstagramId"
+              id="searchInstagramId"
+              required
+            />
+          </p>
+          <p>
+            <button type="submit">Cautator</button>
+          </p>
+        </form>
+        <div id="searchUserByIdResults"></div>
+      </div>
+
+      <div>
+        <p>
+          <button id="findAllUsers">Actualizează lista de utilizatori</button>
+          <button id="updateUsers">
+            Schimbați aleatoriu numărul de urmăritori
+          </button>
+          <button id="removeAllUsers">Ștergeți toți utilizatorii</button>
+        </p>
+        <div id="removeUserError"></div>
+        <div id="users"></div>
+      </div>
+    </div>
+    <div>
+      <p>
+        <button id="removeAllPosts">Șterge toate postările</button>
+      </p>
+      <div id="posts"></div>
+    </div>
+    <script src="./src/index.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "vanilla-ts",
+  "version": "1.0.0",
+  "description": "JavaScript and TypeScript example starter project",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@codewithdan/observable-store": "2.2.7",
+    "@codewithdan/observable-store-extensions": "2.2.7",
+    "@nano-sql/core": "2.3.7",
+    "js-data": "3.0.8",
+    "js-data-localstorage": "3.0.0-beta.2",
+    "lodash": "4.17.15",
+    "rxjs": "6.5.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": [
+    "typescript",
+    "javascript"
+  ]
+}
